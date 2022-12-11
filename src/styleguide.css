@@ -1,0 +1,26 @@
+:root { 
+  --black-2: #000000;
+  --charade: #2c2c39;
+  --storm-gray: #70708f;
+  --white-2: #ffffff;
+ 
+  --font-size-s: 17px;
+  --font-size-xxxl: 32px;
+ 
+  --font-family-poppins: "Poppins", Helvetica;
+}
+.poppins-medium-storm-gray-17px {
+  color: var(--storm-gray);
+  font-family: var(--font-family-poppins);
+  font-size: var(--font-size-s);
+  font-style: normal;
+  font-weight: 500;
+}
+
+.poppins-medium-white-32px {
+  color: var(--white-2);
+  font-family: var(--font-family-poppins);
+  font-size: var(--font-size-xxxl);
+  font-style: normal;
+  font-weight: 500;
+}
