@@ -51,29 +51,43 @@ contract NFTCollection is ERC721URIStorage {
         return owner;
     }
 
+    /// @notice Utiliser cette fonction pour mettre a jour le prix d'exposition
+    /// @dev Assigner le prix d'exposition.
+    /// @param _Price nouveau prix d'exposition
     function updateExposePrice(uint256 _Price) public payable {
-        require(owner == msg.sender, "Only owner can update listing price");
+        require(owner == msg.sender, "Seulement le owner peut mettre a jour le prix");
         exposePrice = _Price;
     }
 
+    /// @notice Renvoie le prix d'exposition
     function getExposePrice() public view returns (uint256) {
         return exposePrice;
     }
 
+    /// @notice Renvoie le tokenId du dernier NFT exposé
     function getLatestIdToExposedToken() public view returns (ExposedToken memory) {
         uint256 currentTokenId = _tokenId.current();
         return idToExposedToken[currentTokenId];
     }
 
+    /// @notice Renvoie le token correnspondant a un tokenId
+    /// @param tokenId l'identifiant du token
     function getExposedTokenForId(uint256 tokenId) public view returns (ExposedToken memory) {
         return idToExposedToken[tokenId];
     }
 
+    /// @notice Renvoie l'identifiant du dernier NFT minté 
     function getCurrentToken() public view returns (uint256) {
         return _tokenId.current();
     }
 
-    //Méthode pour créer le NFT et l'exposer pour la premiere fois
+
+    /// @notice créer le NFT et l'exposer pour la premiere fois sur le marketplace
+    /// @dev Incrémenter le tokenId
+    /// @dev Minter le NFT 
+    /// @dev Associer l'URI avec le tokenId du NFT 
+    /// @param tokenURI URI de l'item sur IPFS
+    /// @param price le prix associé
     function createToken(string memory tokenURI, uint256 price) public payable returns (uint) {
 
         //Incrémeter le compteur tokenId des NFTs mintés

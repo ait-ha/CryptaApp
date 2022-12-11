@@ -64,7 +64,7 @@ export default function SellNFT () {
             const signer = provider.getSigner();
     
  
-            updateMessage("Patientez quelques minutes.. téléchargement encours");
+            updateMessage("Patientez quelques secondes.. téléchargement encours");
 
             //Pull the deployed contract instance
             let contract = new ethers.Contract(Marketplace.address, Marketplace.abi, signer);
