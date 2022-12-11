@@ -13,8 +13,7 @@ export default function Cours() {
 
     const [index, setIndex] = useState(0);
 
-    let urls = [{"url": '1_video.mp4', "descr": "Vidéo 1/2 : Présentation générale de Crypta-", "poster":'./media/1_video.png'},
-    {"url": "https://www.youtube.com/watch?v=jAa_qGb83Rg", "descr": "Vidéo 2/2 : 2ème Video"}];
+    let urls = [{"url": '1_video.mp4', "descr": "Vidéo 1/1 : Présentation générale de Crypta", "poster":'./media/1_video.png'}];
   
     function incrementIndex () {
       if (index < urls.length - 1) {
