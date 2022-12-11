@@ -132,7 +132,9 @@ contract NFTCollection is ERC721URIStorage {
         );
     }
     
-    //Renvoie tous les NFTs exposés sur le marketplace
+
+    /// @notice Renvoie tous les NFTs exposés sur le marketplace
+    /// @dev Construit un tableau de structures de token
     function getAllNFTs() public view returns (ExposedToken[] memory) {
         uint nftCount = _tokenId.current();
         ExposedToken[] memory tokens = new ExposedToken[](nftCount);
@@ -150,7 +152,9 @@ contract NFTCollection is ERC721URIStorage {
         return tokens;
     }
     
-    //Renvoie tous les NFTs de l'utilisateur 
+
+    /// @notice Renvoie tous les NFTs de l'utilisateur 
+    /// @dev Construit un tableau de structures de token
     function getMyNFTs() public view returns (ExposedToken[] memory) {
         uint totalItemCount = _tokenId.current();
         uint itemCount = 0;
@@ -176,8 +180,8 @@ contract NFTCollection is ERC721URIStorage {
         return items;
     }
 
-    //Permet le transfert des fees au créateur de la marketplace
-    //Transfert du prix du NFT au vendeur
+
+    /// @notice Transfert du NFT
     function purchase(uint256 tokenId) public payable {
         uint price = idToExposedToken[tokenId].price;
         address seller = idToExposedToken[tokenId].seller;
