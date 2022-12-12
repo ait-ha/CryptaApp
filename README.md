@@ -8,8 +8,8 @@ Toutes les fonctionnalités du contrat sont utilisable via le front.
 
 ## Links
 
-Voici la [vidéo démo]() de la Dapp !  
-Voici le [lien de déploiement]() de la Dapp !
+Voici la video [https://www.loom.com/share/085a6450b65347ee9a98568fd6c77453] de la Dapp !  
+Voici le lien déploiement [https://crypta-app.vercel.app/] de la Dapp !
 
 ## Composants
 
@@ -26,7 +26,7 @@ L'interface est découpé en plusieurs composants :
 
 ## Déploiement
 
-A déployer sur Goerli 
+A déployer sur Goerli et tester la Dapp sur Chrome
 
 ## Utilisation
 
@@ -35,6 +35,4 @@ npm install
 npx hardhat run scripts/deploy.js --network goerli
 npm start  
 
-## Screenshot
 
-![image](https://user-images.githubusercontent.com/45956179/203595320-bf675745-9017-417e-8708-ae96f2de20a1.png)
